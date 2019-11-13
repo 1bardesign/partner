@@ -550,7 +550,7 @@ function ui_button:new(asset_or_text, w, h, callback, key)
 	if key ~= nil then
 		function self:onkey(event, k)
 			if event == "press" and k == key then
-				callback(self, self.w * 0.5, self.h * 0.5)
+				self:onclick(self.w * 0.5, self.h * 0.5)
 				return true
 			end
 		end
